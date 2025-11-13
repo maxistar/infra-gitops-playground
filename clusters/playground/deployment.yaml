@@ -47,6 +47,7 @@ spec:
             - /bin/sh
             - -c
             - |
+              export DB_URL="jdbc:mysql://${DB_HOST}:3306/cortex_test?autoReconnect=true&sessionVariables=transaction_isolation='READ-COMMITTED'"
               echo "🔧 Using DB_URL=${DB_URL}"
               exec ./operaton.sh
           resources:
