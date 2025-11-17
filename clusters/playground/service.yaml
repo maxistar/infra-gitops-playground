@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: camunda-svc
-  namespace: cortex-stage
+  name: cortex-svc
+  namespace: cortex-test
 spec:
   selector:
-    app: camunda
+    app: cortex
   ports:
     - name: http
       port: 80
